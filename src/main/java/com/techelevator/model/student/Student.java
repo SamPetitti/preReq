@@ -6,7 +6,7 @@ public class Student {
 	
 	private int studentId;
 	
-	//@NotBlank(message= "Last Name is required")
+	@NotBlank(message= "Last Name is required")
 	private String lastName;
 	
 	//@NotBlank(message= "First Name is required")

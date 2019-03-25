@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -46,7 +49,7 @@ public StudentDAO studentDao;
 	}
 	
 	@RequestMapping(path= "newStudent", method=RequestMethod.POST)
-	public String newStudentRegistration(/*@Valid*/ @ModelAttribute("Student") Student newStudent,
+	public String newStudentRegistration(@Valid @ModelAttribute("Student") Student newStudent,
 			BindingResult result,
 			RedirectAttributes flash) {
 		if(result.hasErrors()) {
